@@ -1,0 +1,157 @@
+body {
+   font-family: FreeMono, monospace;
+   background-color: #fff;
+   color: #212336;
+   padding: 0px;
+   position: relative;
+   padding-top: 120px;
+   padding-bottom: 80px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.auth-page {
+   background-color: #212336;
+   color: #212336;
+   padding: 0px;
+}
+
+.authentication-form {
+    width: 350px;
+    padding: 60px;
+    background-color: #fff;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: FreeMono, monospace;
+    font-weight: 700;
+    font-size: x-large;
+    line-height: 2.0;
+    color: #003366;
+}
+
+.authentication-form input, .authentication-form button {
+    border: none;
+    border-color: #002142;
+    width: 90%;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #b6c6db;
+    color: #002142;
+    font-family: FreeMono, monospace;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.authentication-form input:-webkit-autofill {
+    font-family: FreeMono, monospace;
+    font-weight: 700;
+    font-size: x-large;
+    box-shadow: 0 0 0px 1000px #b6c6db inset;
+    -webkit-text-fill-color: #002142;
+}
+
+.authentication-form input:focus, .authentication-form button:focus {
+    outline: none;
+    border: none;
+}
+
+.authentication-form button {
+    background-color: #606dd1;
+    color: #fff;
+    border: none;
+    padding: 30px;
+    width: 90%;
+    margin-top: 60px;
+    font-family: FreeMono, monospace;
+    font-size: large;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.authentication-form button:hover {
+    background-color: #49539e;
+}
+
+.control-panel-top {
+    width: 100%;
+    border: none;
+    background-color: #49539e;
+    padding: 60px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.control-panel-down {
+    width: 100%;
+    background-color: #49539e;
+    padding: 50px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 25px;
+}
+
+.button-link {
+    width: 350px;
+    background-color: #606dd1;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-weight: 700;
+    margin: 5px;
+    font-family: FreeMono, monospace;
+    font-size: large;
+    border-radius: 15px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-link:hover {
+    background-color: #3c447f;
+}
+
+.chat-container {
+    margin: 10px;
+    padding-top: 60px;
+    text-align: center;
+    padding: 20px;
+    font-size: large;
+    font-family: FreeMono, monospace;
+}
+
+.message-display {
+    background-color: #d0e0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.logout-link {
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+}

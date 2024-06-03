@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Department Page{% endblock %}
+
+{% block content %}
+    <h1>Отдел {{ department.department_name }}</h1>
+   <p>{{ department.dep_description }}</p>
+   <p>Количество сотрудников: {{ department.emp_num }}</p>
+
+{% endblock %}

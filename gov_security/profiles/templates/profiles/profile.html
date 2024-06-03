@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile Page{% endblock %}
+
+{% block content %}
+   <h1>Профиль</h1>
+   <p>Логин: {{ employee.username }}</p>
+   <p>ФИО:
+        {% if employee.first_name %}
+                {{ employee.last_name }} {{ employee.first_name }}
+                    {% if employee.patronymic %}
+                        {{ employee.patronymic }}
+                    {% endif %}
+        {% else %}
+            не назначено
+        {% endif %}
+    </p>
+   <p>Возраст:
+        {% if employee.age %}
+                {{ employee.age }}
+        {% else %}
+            не назначен
+        {% endif %}
+    </p>
+   <p>Телефон:
+        {% if employee.phone %}
+                {{ employee.phone }}
+        {% else %}
+            не назначен
+        {% endif %}
+    </p>
+   <p>Должность:
+        {% if employee.position %}
+            <a href="{% url 'resources_list' employee_id=user.id %}">
+                {{ employee.position }}
+            </a>
+        {% else %}
+            не назначена
+        {% endif %}
+    </p>
+    <p>Отдел:
+        {% if employee.department %}
+            <a href="{% url 'department:department_info' department_id=employee.department.id %}">
+                {{ employee.department.department_name }}
+            </a>
+        {% else %}
+            не задан
+        {% endif %}
+    </p>
+{% endblock %}
