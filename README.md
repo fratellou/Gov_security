@@ -134,7 +134,12 @@ pip install -r requirements.txt
 
 4. Создать переменные окружения в файле .env (пример переменных окружения представлен в файле .env.example).
 
-5. Запустить сервер:
+5. Применить миграции:
+```
+python3 manage.py migrate
+```
+
+6. Запустить сервер:
 
 ```
 python3 manage.py runserver
