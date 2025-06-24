@@ -70,7 +70,7 @@ The project defines various models, each of which represents a specific entity i
         - *message_text*: Message text; 
         - *timestamp*: Date and time when the message was created.
 
-![ER-diagramm](./gov_security/gov_security/media/ER-diagramm.png)
+![ER-diagramm](./gov_security/readme_images/ER-diagramm.png)
 
 ## Security features
 
@@ -86,27 +86,27 @@ The project includes CSRF (Cross-Site Request Forgery) tokens to protect against
 
 After logging in to the site, an authentication page is displayed.
 
-![auth](./gov_security/gov_security/media/auth.png)
+![auth](./gov_security/readme_images/auth.png)
 
 After entering the correct username and password, the main page of the web application will open. If an incorrect input is attempted, an error message is displayed.
 
-![main](./gov_security/gov_security/media/main.png)
+![main](./gov_security/readme_images/main.png)
 
 On the main page there is a chat for users of the department to which the user belongs. The navigation bar contains the buttons "Chat", "Tasks", "Profile", "Resources". There are also functions for sending a message to the chat and logging out of the account. Clicking on the "Tasks" button opens the tasks page.
 
-![tasks](./gov_security/gov_security/media/tasks.png)
+![tasks](./gov_security/readme_images/tasks.png)
 
 The page shows a window that displays all the tasks with their descriptions that have been assigned to the user. Clicking on the "Profile" button opens the user's profile page.
 
-![profile](./gov_security/gov_security/media/profile.png)
+![profile](./gov_security/readme_images/profile.png)
 
 Clicking on the link in the Department field opens the page of the department to which the user belongs.
 
-![department](./gov_security/gov_security/media/department.png)
+![department](./gov_security/readme_images/department.png)
 
 Clicking on the "Resources" button opens a resource page with the name and type of resource that are available to the user according to his position. By clicking on the "Download" link, the required file will be installed on the device.
 
-![resources](./gov_security/gov_security/media/resources.png)
+![resources](./gov_security/readme_images/resources.png)
 
 Clicking on the "Log out" button will log out of the account and the authentication page will be displayed. 
 

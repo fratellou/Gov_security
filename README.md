@@ -70,7 +70,7 @@
         - *message_text*: Текст сообщения; 
         - *timestamp*: Дата и время создания сообщения.
 
-![ER-diagramm](./gov_security/gov_security/media/ER-diagramm.png)
+![ER-diagramm](./gov_security/readme_images/ER-diagramm.png)
 
 ## Средства безопасности
 
@@ -86,27 +86,27 @@
 
 После входа на сайт выводится страница аутентификации.
 
-![auth](./gov_security/gov_security/media/auth.png)
+![auth](./gov_security/readme_images/auth.png)
 
 После ввода корректного логина и пароля откроется главная страница веб приложения. При попытке неправильного ввода, выведется сообщение об ошибке. 
 
-![main](./gov_security/gov_security/media/main.png)
+![main](./gov_security/readme_images/main.png)
 
 На главной странице расположен чат пользователей отдела, к которому принадлежит пользователь. На панели навигации располагаются кнопки «Чат», «Задачи», «Профиль», «Ресурсы». Также есть функции отправления сообщения в чат и выхода из аккаунта. При нажатии на кнопку «Задачи» откроется страница задач.
 
-![tasks](./gov_security/gov_security/media/tasks.png)
+![tasks](./gov_security/readme_images/tasks.png)
 
 На странице показано окно, в котором выводятся все задачи с их описанием, которые были назначены пользователю. При нажатии на кнопку «Профиль» откроется страница профиля пользователя. 
 
-![profile](./gov_security/gov_security/media/profile.png)
+![profile](./gov_security/readme_images/profile.png)
 
 При нажатии на ссылку в поле «Отдел» откроется страница отдела, к которому принадлежит пользователь.
 
-![department](./gov_security/gov_security/media/department.png)
+![department](./gov_security/readme_images/department.png)
 
 При нажатии на кнопку «Ресурсы» откроется страница ресурсов с наименованием и типом ресурса, которые доступны пользователю согласно его должности. Нажав на ссылку «Скачать», на устройство установится необходимый файл. 
 
-![resources](./gov_security/gov_security/media/resources.png)
+![resources](./gov_security/readme_images/resources.png)
 
 При нажатии на кнопку «Выйти» произойдет выход из аккаунта и выведется страница аутентификации. 
 
