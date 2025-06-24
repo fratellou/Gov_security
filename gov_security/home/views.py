@@ -26,7 +26,6 @@ def post_message(request):
                 author=request.user,
                 message_text=message_text
             )
-            print("New message created:", new_message)  # Добавьте вывод для отладки
             return redirect('home')
         else:
             return render(request, 'home/home.html', {'error': "The message can’t be empty."})

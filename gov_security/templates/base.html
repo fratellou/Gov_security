@@ -15,13 +15,13 @@
                 <a href="{% url 'tasks_list' employee_id=user.id %}" class="button-link">Задачи</a>
                 <a href="{% url 'employee_profile' employee_id=user.id %}" class="button-link">Профиль</a>
                 <a href="{% url 'resources_list' employee_id=user.id %}" class="button-link">Ресурсы</a>
+                {% block content %}
+                {% endblock %}
             {% else %}
-                <a href="{% url 'login' %}" class="button-link">Login</a>
+                <a href="{% url 'login' %}" class="button-link">Войти</a>
             {% endif %}
         </div>
     </div>
-    {% block content %}
-    {% endblock %}
     <div class="control-panel-down">
         <div class="logout-link">
             {% if user.is_authenticated %}

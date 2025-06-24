@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from accounts.models import Department, Employee
+from django.contrib.auth.decorators import login_required
 
 
+@login_required
 def department_info(request, department_id):
     department = get_object_or_404(Department, pk=department_id)
     employee = None

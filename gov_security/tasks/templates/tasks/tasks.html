@@ -4,7 +4,7 @@
 
 {% block content %}
     <h1>Список задач</h1>
-   `{% if employee.task_entries.all %}
+   {% if employee.task_entries.all %}
        <ul>
            {% for entry in employee.task_entries.all %}
                <li>{{ entry.task.task_name }} - {{ entry.task.task_description }}</li>
