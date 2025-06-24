@@ -12,10 +12,12 @@ def login_view(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('home')  # Перенаправление на главную после успешного входа
+                return redirect('home')
         else:
             form.errors.clear()
-            form.add_error(None, 'Введены неправильное имя пользователя или пароль. Повторите попытку.')
+            form.add_error(
+                None, ('Введены неправильное имя пользователя или пароль. '
+                       'Повторите попытку.'))
     else:
         form = CustomAuthForm()
     return render(request, 'accounts/login.html', {'form': form})

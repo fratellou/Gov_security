@@ -22,9 +22,10 @@ class CustomAuthForm(AuthenticationForm):
         password = self.cleaned_data.get('password')
         errors = []
         if not username:
-            errors.append(forms.ValidationError('Пожалуйста, введите имя пользователя.'))
+            errors.append(forms.ValidationError(
+                'Пожалуйста, введите имя пользователя.'))
         if not password:
             errors.append(forms.ValidationError('Пожалуйста, введите пароль.'))
         if errors:
             raise ValidationError(errors)
-        return super().clean()  # Запуск стандартной проверки.
+        return super().clean()
