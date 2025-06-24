@@ -144,6 +144,11 @@ python3 manage.py migrate
 ```
 python3 manage.py runserver
 ```
+7. Создать суперюзера:
+```
+python3 manage.py createsuperuser
+```
+8. Перейти в *http://127.0.0.1:8000/admin* и создать необходимые данные
 
 ---
 > fratellou, 2024
