@@ -1,54 +1,74 @@
-{% if user.is_authenticated %}
+{% extends 'base.html' %}
 
-    {% extends 'base.html' %}
+{% block title %}Profile Page{% endblock %}
 
-    {% block title %}Profile Page{% endblock %}
-        {% block content %}
-        <h1>Профиль</h1>
-        <p>Логин: {{ employee.username }}</p>
-        <p>ФИО:
+{% block content %}
+
+<div class="chat-container">
+    <h1>Профиль</h1>
+    <div class="tasks-container">
+        <ul>
+            <li>
+                <strong>Логин:</strong> {{ employee.username }}
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <strong>ФИО:</strong>
                 {% if employee.first_name %}
                         {{ employee.last_name }} {{ employee.first_name }}
                             {% if employee.patronymic %}
                                 {{ employee.patronymic }}
                             {% endif %}
                 {% else %}
-                    не назначено
+                    Нет данных.
                 {% endif %}
-            </p>
-        <p>Возраст:
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <strong>Возраст:</strong>
                 {% if employee.age %}
                         {{ employee.age }}
                 {% else %}
-                    не назначен
+                    Нет данных.
                 {% endif %}
-            </p>
-        <p>Телефон:
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <strong>Телефон:</strong>
                 {% if employee.phone %}
                         {{ employee.phone }}
                 {% else %}
-                    не назначен
+                    Нет данных.
                 {% endif %}
-            </p>
-        <p>Должность:
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <strong>Должность:</strong>
                 {% if employee.position %}
-                    <a href="{% url 'resources_list' employee_id=user.id %}">
+                    <a class="profile-link" href="{% url 'resources_list' employee_id=user.id %}">
                         {{ employee.position }}
                     </a>
                 {% else %}
-                    не назначена
+                    Нет данных.
                 {% endif %}
-            </p>
-            <p>Отдел:
-                {% if employee.department %}
-                    <a href="{% url 'department:department_info' department_id=employee.department.id %}">
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <strong>Отдел:</strong>
+                {% if employee.position %}
+                    <a class="profile-link" href="{% url 'department:department_info' department_id=employee.department.id %}">
                         {{ employee.department.department_name }}
                     </a>
                 {% else %}
-                    не задан
+                    Нет данных.
                 {% endif %}
-            </p>
-    {% endblock %}
-{% else %}
-    <p>Для доступа к странице профиля необходимо войти в систему.</p>
-{% endif %}
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
