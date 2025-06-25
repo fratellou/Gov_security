@@ -14,7 +14,7 @@ def home_view(request):
         'messages': messages,
         'department_name': user_department.department_name
     }
-    return render(request, "home/home.html",  context)
+    return render(request, 'home/home.html',  context)
 
 
 def logout_view(request):

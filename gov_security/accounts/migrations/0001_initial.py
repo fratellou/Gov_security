@@ -16,16 +16,24 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Position',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True,
+                                           serialize=False,
+                                           verbose_name='ID')),
                 ('position_name', models.CharField(max_length=20)),
             ],
         ),
         migrations.CreateModel(
             name='Permission',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('resource', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='resources.resource')),
-                ('position', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='accounts.position')),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True,
+                                           serialize=False,
+                                           verbose_name='ID')),
+                ('resource', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    to='resources.resource')),
+                ('position', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    to='accounts.position')),
             ],
         ),
     ]

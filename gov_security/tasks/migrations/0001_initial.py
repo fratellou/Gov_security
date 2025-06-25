@@ -18,18 +18,29 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Task',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('task_name', models.CharField(max_length=50)),
                 ('task_description', models.TextField()),
-                ('head', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='departments.head')),
+                ('head', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    to='departments.head')),
             ],
         ),
         migrations.CreateModel(
             name='TaskList',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('employee', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='task_entries', to=settings.AUTH_USER_MODEL)),
-                ('task', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='task_entries', to='tasks.task')),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True,
+                                           serialize=False,
+                                           verbose_name='ID')),
+                ('employee',
+                 models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+                                   related_name='task_entries',
+                                   to=settings.AUTH_USER_MODEL)),
+                ('task',
+                 models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+                                   related_name='task_entries',
+                                   to='tasks.task')),
             ],
         ),
     ]

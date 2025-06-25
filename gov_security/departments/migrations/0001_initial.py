@@ -16,7 +16,9 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Department',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True,
+                                           serialize=False,
+                                           verbose_name='ID')),
                 ('department_name', models.CharField(max_length=50)),
                 ('dep_description', models.TextField()),
                 ('emp_num', models.IntegerField()),
@@ -25,10 +27,15 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Head',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('head_name', models.CharField(max_length=100)),
-                ('department', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='departments.department')),
-                ('position', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='accounts.position')),
+                ('department', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    to='departments.department')),
+                ('position', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE,
+                    to='accounts.position')),
             ],
         ),
     ]
