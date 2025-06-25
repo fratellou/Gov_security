@@ -1,2 +1,4 @@
 .env
 *.sqlite3
+resources/media/*
+!resources/media/__init__.py

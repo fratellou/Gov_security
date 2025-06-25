@@ -3,14 +3,26 @@
 {% block title %}Available Resources{% endblock %}
 
 {% block content %}
-    <h1>Ресурсы доступные {{ employee.username }}</h1>
-    {% if resources %}
-        <ul>
-            {% for resource in resources %}
-                <li>{{ resource.resource_name }} ({{ resource.resource_type.resource_type }})</li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>Нет доступных ресурсов для вашей позиции.</p>
-    {% endif %}
+
+<div class="chat-container">
+    <h1>Ресурсы, доступные {{ employee.username }}</h1>
+    <div class="tasks-container">
+        {% if resources %}
+            <ul>
+                {% for resource in resources %}
+                    <li>
+                        <strong>{{ resource.resource_name }}</strong> - {{ resource.resource_type.resource_type }}.
+                        <a class="profile-link" href="{% url 'download_resource' resource.id %}">Скачать</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <ul>
+                <li>
+                    <strong>Нет доступных ресурсов.</strong>
+                </li>
+            </ul>
+        {% endif %}
+    </div>
+</div>
 {% endblock %}
