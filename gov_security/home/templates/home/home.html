@@ -3,22 +3,26 @@
 {% block title %}Home Page{% endblock %}
 
 {% block content %}
-    {% if user.is_authenticated %}
-        <div class="chat-container">
-            <h1>Чат отдела</h1>
-            <div class="message-display">
-                    <ul>
-                        {% for message in messages %}
-                            <li><strong>{{ message.author.username }}:</strong> {{ message.message_text }}
-                            <small>{{ message.timestamp|date:"H:i:s" }}</small></li>
-                        {% endfor %}
-                    </ul>
-            </div>
-            <form action="{% url 'post_message' %}" method="post">
-                {% csrf_token %}
-                <input type="text" name="message_text" placeholder="Type your message here…">
-                <button type="submit">Send</button>
-            </form>
+    <div class="chat-container">
+        <h1>Чат отдела "{{ department_name }}"</h1>
+        <div class="messages-container">
+            {% if user.is_authenticated %}
+                <ul>
+                    {% for message in messages %}
+                         <li><strong>{{ message.author.username }}:</strong> {{ message.message_text }}
+                        <small>{{ message.timestamp|date:"H:i:s" }}</small></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </div>
-    {% endif %}
+        <form action="{% url 'post_message' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="message_text" placeholder="Введите сообщение…">
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+    <script>
+        var messageContainer = document.querySelector('.messages-container');
+        messageContainer.scrollTop = messageContainer.scrollHeight;
+    </script>
 {% endblock %}
