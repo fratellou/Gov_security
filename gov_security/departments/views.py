@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
-from accounts.models import Department, Employee
+from profiles.models import Employee
+from departments.models import Department
 from django.contrib.auth.decorators import login_required
 
 
