@@ -1,7 +1,8 @@
-from django.db import models
-from departments.models import Department
 from django.contrib.auth.models import AbstractUser
+from django.db import models
+
 from accounts.models import Position
+from departments.models import Department
 
 
 class Employee(AbstractUser):

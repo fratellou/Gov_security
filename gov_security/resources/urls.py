@@ -1,5 +1,6 @@
 from django.urls import path
-from resources.views import resources_list, download_resource
+
+from resources.views import download_resource, resources_list
 
 urlpatterns = [
     path('resources/<int:employee_id>/',

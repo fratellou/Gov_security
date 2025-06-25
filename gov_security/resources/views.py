@@ -1,9 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
+from django.shortcuts import get_object_or_404, render
+
 from accounts.models import Permission
 from profiles.models import Employee
 from resources.models import Resource
-from django.http import HttpResponse
-from django.contrib.auth.decorators import login_required
 
 
 @login_required

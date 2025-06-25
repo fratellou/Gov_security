@@ -1,6 +1,7 @@
 from django.db import models
-from profiles.models import Employee
+
 from departments.models import Head
+from profiles.models import Employee
 
 
 class Task(models.Model):

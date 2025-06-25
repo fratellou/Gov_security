@@ -1,10 +1,11 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from resources.models import ResourceType, Resource
-from accounts.models import Position, Permission
+
+from accounts.models import Permission, Position
 from departments.models import Department, Head
-from tasks.models import Task, TaskList
 from profiles.models import Employee
+from resources.models import Resource, ResourceType
+from tasks.models import Task, TaskList
 
 
 class EmployeeAdmin(BaseUserAdmin):
