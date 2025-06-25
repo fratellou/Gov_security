@@ -112,7 +112,7 @@ body.auth-page {
 }
 
 .button-link {
-    width: 350px;
+    width: 300px;
     background-color: #606dd1;
     color: #fff;
     border: none;
@@ -133,21 +133,77 @@ body.auth-page {
 }
 
 .chat-container {
-    margin: 10px;
-    padding-top: 60px;
-    text-align: center;
-    padding: 20px;
-    font-size: large;
-    font-family: FreeMono, monospace;
+    position: relative;
+    width: 1000px;
+    height: 400px;
+    margin: 10px auto;
+    color: #fff;
+    padding: 10px;
+    border: 3px solid #606dd1;
+    background-color: #606dd1;
+    border-radius: 15px;
 }
 
-.message-display {
-    background-color: #d0e0f0;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    height: 300px;
+.messages-container {
+    height: 80%;
+    background-color: #fff;
     overflow-y: auto;
+    border-radius: 15px;
+    color: #002142;
+    margin-bottom: 10px;
+    flex-direction: column-reverse;
+    font-size: large;
+    justify-content: flex-start;
+    scrollbar-color: #606dd1 #ffffff;
+}
+
+.messages-container ul {
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+.chat-container input[type="text"] {
+    width: 70%;
+    padding: 10px 15px;
+    margin-right: 5px;
+    margin-top: 10px;
+    color: #002142;
+    border: 3px solid #d0e0f0;
+    border-radius: 15px;
+    font-weight: 700;
+    font-family: FreeMono, monospace;
+    font-size: large;
+}
+
+.chat-container input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px #fff inset;
+    font-family: FreeMono, monospace;
+    font-weight: 700;
+    font-size: large;
+}
+
+.chat-container input:focus {
+    outline: none;
+    border: 3px solid #d0e0f0;
+    border-radius: 15px;
+}
+
+.chat-container button {
+    width: 200px;
+    background-color: #606dd1;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-weight: 700;
+    margin: 5px;
+    font-family: FreeMono, monospace;
+    font-size: large;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.chat-container button:hover {
+    background-color: #3c447f;
 }
 
 .logout-link {
@@ -156,8 +212,31 @@ body.auth-page {
     bottom: 20px;
 }
 
-.content {
-    padding: 20px;
-    margin-top: 20px;
-    border: 1px solid #ccc;
+.tasks-container {
+    box-sizing: border-box;
+    height: 80%;
+    background-color: #fff;
+    overflow-y: auto;
+    border-radius: 15px;
+    color: #002142;
+    font-size: large;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    scrollbar-color: #606dd1 #ffffff;
+}
+
+.tasks-container strong {
+    font-weight: bold;
+}
+
+.tasks-container ul {
+    box-sizing: border-box;
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+.profile-link {
+    color: #606dd1;
+    text-decoration: none;
+    font-weight: 700;
 }

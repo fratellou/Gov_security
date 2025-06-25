@@ -3,14 +3,24 @@
 {% block title %}Tasks Page{% endblock %}
 
 {% block content %}
+<div class="chat-container">
     <h1>Список задач</h1>
-   {% if employee.task_entries.all %}
-       <ul>
-           {% for entry in employee.task_entries.all %}
-               <li>{{ entry.task.task_name }} - {{ entry.task.task_description }}</li>
-           {% endfor %}
-       </ul>
-    {% else %}
-        <p>Нет доступных задач.</p>
-    {% endif %}
+    <div class="tasks-container">
+        {% if employee.task_entries.all %}
+            <ul>
+                {% for entry in employee.task_entries.all %}
+                    <li>
+                        <strong>{{ entry.task.task_name }}</strong> - {{ entry.task.task_description }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <ul>
+                <li>
+                    <strong>Нет доступных задач.</strong>
+                </li>
+            </ul>
+        {% endif %}
+    </div>
+</div>
 {% endblock %}
